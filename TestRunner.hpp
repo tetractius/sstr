@@ -35,7 +35,7 @@ static void runTestsIfNameContains(const std::string& s)
 {
     for (auto test: S::vector_of_tests)
     {
-        if(test && test->first.contains(s))
+        if(test && test->first.find(s) != std::string::npos)
         {
             test->second();
         }
