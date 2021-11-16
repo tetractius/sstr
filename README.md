@@ -43,7 +43,33 @@ int main()
 ```
 
 ## Adding to gotbolt
-TODO
+You can use in godbolt (That was actually the real reason why I decided to waste time in putting this in github :) ) simply by doing:
+
+```
+#include <https://raw.githubusercontent.com/tetractius/sstr/main/TestRunner.hpp>
+// or
+#include <https://pastebin.com/raw/G0kiyxy8>
+
+INIT_RUNS;
+
+ADD_RUN(godbolt_cool_test)
+{
+    auto return42 = [](){return 42;};
+    EXPECT(return42() == 42); // succesfull test
+    EXPECT(return42() == 43); // failing test
+}
+
+int main()
+{
+    runTests();
+}
+```
+
+## Install
+Really?... well ok :S
+```
+curl -L -o TestRunner.hpp https://j.mp/SuperSimpleTestRunner
+```
 
 ## IMPORTANT NOTES
 
