@@ -2,7 +2,8 @@
 
 Look... honestly I don't think that anybody should really ever use this stuff. 
 But everytime I needed to do some demo and do some test that would require something just a bit more flexible that a single main function, I was annoyed to go through the burden of importing the gtest library (that nowadays it became massively complex - I mean... good (gmocks rocks), but too complex).
-Up to a certain point there as catch2... header only. But it started to get super slow, so that now they splitted in several headers and I think that is not header only anymore either.
+Up to a certain point there was catch2... header only. 
+But it started to be super slow, so that now they splitted in several headers and I think that is not header only anymore either.
 
 So here is your single TestRunner.hpp that has only a few calls that I show directly in code.
 **BEWARE: Requires at least C++17.**
